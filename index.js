@@ -1,24 +1,29 @@
 // Write your solution in this file!
 const driver = {
-
+    name: 'Sam',
+    address: '11 Broadway'
 }
 
-function updateDriverWithKeyAndValue(driver, key, value) {
-    return {...driver, [key]: value };
+
+function updateDriverWithKeyAndValue(obj, key, value) {
+    const nextDriver = {...obj }
+    nextDriver[key] = value;
+    return nextDriver;
 }
 
-function destructivelyUpdateDriverWithKeyAndValue(driver, key, value) {
-    driver[key] = value;
-    return driver;
+function destructivelyUpdateDriverWithKeyAndValue(obj, key, value) {
+    obj[key] = value;
+    return obj;
 }
 
-function deleteFromDriverByKey(driver, key) {
-    const newDriver = Object.assign({}, driver);
-    delete newDriver[key];
-    return newDriver;
+function deleteFromDriverByKey(obj, key) {
+    const nextDriver = {...obj }
+    delete nextDriver[key];
+    return nextDriver;
 }
 
-function destructivelyDeleteFromDriverByKey(driver, key) {
-    delete driver[key];
-    return driver
+function destructivelyDeleteFromDriverByKey(obj, key) {
+
+    delete obj[key];
+    return obj;
 }
